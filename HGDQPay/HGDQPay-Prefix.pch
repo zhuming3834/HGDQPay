@@ -1,0 +1,46 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+/**
+ *  支付宝支付相关
+ */
+#import "Order.h"
+#import "DataSigner.h"
+#import <AlipaySDK/AlipaySDK.h>
+#import "Product.h"
+/**
+ *  银联支付相关
+ */
+#import "UPPaymentControl.h"
+#import "RSA.h"
+#import <CommonCrypto/CommonDigest.h>
+#include <sys/socket.h> // Per msqr
+#include <sys/sysctl.h>
+#include <net/if.h>
+#include <net/if_dl.h>
+/**
+ *  微信支付相关
+ */
+
+#include "payRequsestHandler.h"
+#include "TenpayUtil.h"
+#include "WXApi.h"
+#include "WXApiObject.h"
+#include "WXUtil.h"
+
+#include "HGDQPay.h"
+
+
+#endif
